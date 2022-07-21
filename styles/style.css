@@ -81,13 +81,13 @@ p {
 .full-box a {
     text-decoration: none;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
     color: #161616;
     text-decoration: none;
-    text-align: center;
 }
 
 .box {
+    border: 1px solid gray;
     background-color: #FFFFFF;
     border-radius: 5px;
     margin-left: 25px;
@@ -96,13 +96,23 @@ p {
     height: 60px;
 }
 
+.box a {
+    padding-left: 10px;
+}
+
 .select-box {
+    border: 1px solid gray;
     background-color: #DD0000;
     border-radius: 5px;
     margin-left: 25px;
     margin-top: 30px;
     width: 200px;
     height: 60px;
+}
+
+.select-box a {
+    padding-left: 30px;
+    color: #FFFFFF;
 }
 
 /* --------
@@ -113,10 +123,10 @@ p {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 26px;
     column-gap: 20px;
+    position: relative;
 }
 
 .container {
-    position: relative;
     width: 260px;
     height: 362px;
     border: 1px solid lightgrey;
@@ -260,4 +270,112 @@ h5 {
 
 .match p {
     color: gray;
+}
+
+/*--------
+      Media quarirs
+         ------------- */
+/* -------For mobile devise-------*/
+@media only screen and (max-width: 688px) {
+    .top-banner {
+        flex-direction: column;
+        width: 400px;
+        height: 680px;
+        float: none;
+    }
+
+    .banner-article {
+        text-align: center;
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .top-banner img {
+        width: 70%;
+        padding-left: 60px;
+    }
+
+    .full-blogs {
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        margin-top: 40px;
+    }
+
+    .full-box {
+        margin-left: 275px;
+
+    }
+
+    .blog-container {
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 400px;
+    }
+
+    .view-button {
+        display: none;
+    }
+
+    footer {
+        margin-left: 275px;
+        height: 600px;
+        margin-top: 40px;
+    }
+
+    .contacts,
+    .contact-site {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        padding-left: 20px;
+    }
+}
+
+/* -----------For tablet devise-------- */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .top-banner {
+        width: 100%;
+        float: none;
+    }
+
+    .full-blogs {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .full-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        background-color: white;
+        width: 750px;
+        height: 125px;
+        margin-left: 240px;
+    }
+
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 515px;
+    }
+
+    .view-button {
+        margin-left: 500px;
+    }
+
+    footer {
+        margin-left: 245px;
+        margin-top: 50px;
+        height: 300px;
+    }
+}
+
+/* -------for laptop or other device----- */
+@media only screen and (min-width: 993px) {
+    .view-button {
+        display: none;
+    }
 }
